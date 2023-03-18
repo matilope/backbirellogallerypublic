@@ -1,0 +1,66 @@
+{
+   "version": 2,
+   "name": "birello-gallery",
+   "builds": [
+      {
+         "src": "index.js",
+         "use": "@vercel/node"
+      }
+   ],
+   "routes": [
+      {
+         "src": "/(.*)",
+         "dest": "index.js",
+         "methods": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "OPTIONS",
+            "DELETE"
+          ],
+          "headers": {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+            "Access-Control-Allow-Credentials": "true"
+          },
+          "continue": true
+      },
+      {
+         "src": "/apirest/:path",
+         "dest": "index.js",
+         "methods": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "OPTIONS",
+            "DELETE"
+          ],
+          "headers": {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+            "Access-Control-Allow-Credentials": "true"
+          },
+          "continue": true
+      },
+      {
+         "src": "apirest/:path/:id",
+         "dest": "index.js",
+         "methods": [
+            "GET",
+            "POST",
+            "PUT",
+            "PATCH",
+            "OPTIONS",
+            "DELETE"
+          ],
+          "headers": {
+            "Access-Control-Allow-Origin": "*",
+            "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept",
+            "Access-Control-Allow-Credentials": "true"
+          },
+          "continue": true
+      }
+   ]
+}
