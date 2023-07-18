@@ -4,13 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node api/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
-    "body-parser": "^1.19.2",
     "cloudinary": "^1.28.1",
     "connect-multiparty": "^2.2.0",
     "cors": "^2.8.5",
@@ -20,8 +19,9 @@
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^6.2.3",
     "nodemailer": "^6.7.2",
-    "postman-request": "*",
-    "validator": "^13.7.0"
+    "postman-request": "^2.88.1-postman.32",
+    "validator": "^13.9.0",
+    "vm2": "^3.9.17"
   },
   "devDependencies": {
     "concurrently": "^7.0.0"

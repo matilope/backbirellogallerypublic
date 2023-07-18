@@ -1,10 +1,15 @@
 const {Schema, model} = require('mongoose');
 
-var PortadaSchema = Schema({
-    titulo: String,
-    image0url: String,
+var PortraitSchema = Schema({
+    title: {
+        type: String,
+        required: true
+    },
+    image0url: {
+        type: String,
+        required: true
+    },
     date: { type: Date, default: Date.now }
-
 });
 
-module.exports = model("Portada", PortadaSchema);
+module.exports = model("Portrait", PortraitSchema);
